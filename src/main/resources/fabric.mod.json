@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "dachat",
+	"version": "${version}",
+	"name": "DACHAT",
+	"description": "Broadcast the chat of your live stream directly in minecraft!",
+	"authors": [
+		"TheEVolk"
+	],
+	"contact": {
+		"homepage": "https://github.com/TheEVolk/mc-dachat",
+		"sources": "https://github.com/TheEVolk/mc-dachat"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/da-chat/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.theevolk.dachat.DACHATClient"
+		]
+	},
+	"mixins": [
+		"dachat.mixins.json",
+		{
+			"config": "dachat.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.8",
+		"minecraft": ">=1.19",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
